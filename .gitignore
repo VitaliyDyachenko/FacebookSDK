@@ -194,3 +194,11 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+# Mac crap
+.DS_Store
+# Windows image file caches
+Thumbs.db
+# GhostDoc File
+*.GhostDoc.xml
+# Assembly Version Task
+AssemblyInfo.Version.cs
