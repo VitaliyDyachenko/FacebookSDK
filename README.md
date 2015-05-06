@@ -9,5 +9,6 @@ Facebook SDK is a **Portable Class Library**, therefore it's compatible with mul
 - **Windows Phone** (WinRT) >= 8
 - **Windows Store** >= 8
 - **Xamarin** iOS + Android
+
 ##License
 [MIT license](http://anwarjaved.mit-license.org/)
