@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<package >
+    <metadata>
+        <id>$id$</id>
+        <version>$version$</version>
+        <authors>Anwar Javed</authors>
+        <owners>Anwar Javed</owners>
+        <projectUrl>https://github.com/anwarjaved/FacebookSDK</projectUrl>
+        <licenseUrl>http://anwarjaved.mit-license.org/</licenseUrl>
+        <description>$description$</description>
+        <copyright>Copyright © 2015, Anwar Javed</copyright>
+        <tags>IX Facebook</tags>
+        <dependencies>
+          
+        </dependencies>
+    </metadata>
+</package>
