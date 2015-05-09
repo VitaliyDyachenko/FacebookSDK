@@ -85,7 +85,7 @@ namespace FacebookSDK
         {
             if (this.EnableAppSecretProof)
             {
-                var appsecretProof = Cryptography.CreateHMAC(HashMode.SHA256, this.Credential.Token, this.AppSecret);
+                var appsecretProof = Cryptography.CreateHMAC(HashMode.SHA256, this.Credential.Token, this.AppSecret, HashTextOutput.Base16);
                 request.Parameter("appsecret_proof", appsecretProof);
             }
 
