@@ -13,8 +13,16 @@ namespace FacebookSDK
     /// <date>  5:31 PM 07 May 2015. </date>
     ///-------------------------------------------------------------------------------------------------
 
-    public class UrlPost
+    public class Post
     {
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Gets or sets the main body of the post, otherwise called the status message. </summary>
+        ///
+        /// <value> The main body of the post, otherwise called the status message. </value>
+        ///-------------------------------------------------------------------------------------------------
+
+        public string Message { get; set; }
+
         ///-------------------------------------------------------------------------------------------------
         /// <summary>  The URL of a link to attach to the post.  </summary>
         ///

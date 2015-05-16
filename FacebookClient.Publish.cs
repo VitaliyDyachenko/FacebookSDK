@@ -12,21 +12,23 @@ namespace FacebookSDK
 {
     partial class FacebookClient
     {
-        public IHttpResponse<string> Publish(UrlPost post, Privacy privacy = null)
+        public IHttpResponse<string> Publish(Post post, Privacy privacy = null)
         {
             return this.GetPublishRequest(post, privacy).Response<string>();
         }
 
-        public async Task<IHttpResponse<string>> PublishAsync(UrlPost post, Privacy privacy = null)
+        public async Task<IHttpResponse<string>> PublishAsync(Post post, Privacy privacy = null)
         {
             return await this.GetPublishRequest(post, privacy).ResponseAsync<string>();
         }
 
-        private IHttpRequest GetPublishRequest(UrlPost post, Privacy privacy = null)
+        private IHttpRequest GetPublishRequest(Post post, Privacy privacy = null)
         {
             if (post == null) throw new ArgumentNullException("post");
 
             var request = this.Post("me/feed")
+                .Body("message", post.Message)
+                .Body("link", post.Link)
                 .Body("picture", post.Picture)
                 .Body("name", post.Title)
                 .Body("caption", post.Caption)
@@ -36,7 +38,7 @@ namespace FacebookSDK
             {
                 if (privacy.Type.HasValue)
                 {
-                    if (privacy.Type.Value ==  PrivacyType.Custom)
+                    if (privacy.Type.Value == PrivacyType.Custom)
                     {
                         request.Body("privacy", JsonConvert.SerializeObject(new
                         {
