@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="app.config" />
     <None Include="FacebookSDK.nuspec">
       <SubType>Designer</SubType>
     </None>
@@ -78,12 +79,12 @@
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="IX.Core, Version=8.0.10.0, Culture=neutral, PublicKeyToken=30e33dde67362001, processorArchitecture=MSIL">
-      <HintPath>packages\IX.Core.8.0.10.0\lib\portable-net45+win+wpa81+Xamarin.iOS10+MonoAndroid10+MonoTouch10\IX.Core.dll</HintPath>
+    <Reference Include="IX.Core, Version=8.0.11.0, Culture=neutral, PublicKeyToken=30e33dde67362001, processorArchitecture=MSIL">
+      <HintPath>packages\IX.Core.8.0.11.0\lib\portable-net45+win+wpa81+Xamarin.iOS10+MonoAndroid10+MonoTouch10\IX.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="IX.HttpClient, Version=8.0.39.0, Culture=neutral, PublicKeyToken=30e33dde67362001, processorArchitecture=MSIL">
-      <HintPath>packages\IX.HttpClient.8.0.39.0\lib\portable-net45+win+wpa81+Xamarin.iOS10+MonoAndroid10+MonoTouch10\IX.HttpClient.dll</HintPath>
+    <Reference Include="IX.HttpClient, Version=8.0.41.0, Culture=neutral, PublicKeyToken=30e33dde67362001, processorArchitecture=MSIL">
+      <HintPath>packages\IX.HttpClient.8.0.41.0\lib\portable-net45+win+wpa81+Xamarin.iOS10+MonoAndroid10+MonoTouch10\IX.HttpClient.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
