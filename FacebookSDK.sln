@@ -10,13 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{B7F6B61E-3BD3-4CDB-A535-59FA722E7F33}"
-	ProjectSection(SolutionItems) = preProject
-		.build\MSBuild.Community.Tasks.dll = .build\MSBuild.Community.Tasks.dll
-		.build\MSBuild.Community.Tasks.targets = .build\MSBuild.Community.Tasks.targets
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookSDK", "FacebookSDK.csproj", "{AF2B93C1-EAD4-4010-8528-D082D7585F83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookSDK", "src\FacebookSDK.csproj", "{AF2B93C1-EAD4-4010-8528-D082D7585F83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

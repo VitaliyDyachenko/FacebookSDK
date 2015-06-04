@@ -2,13 +2,14 @@
 
 <package >
     <metadata>
-        <id>$id$</id>
-        <version>$version$</version>
+        <id>FacebookSDK</id>
+		<title>Facebook SDK</title>
+        <version>$version$-beta</version>
         <authors>Anwar Javed</authors>
         <owners>Anwar Javed</owners>
         <projectUrl>https://github.com/anwarjaved/FacebookSDK</projectUrl>
         <licenseUrl>http://anwarjaved.mit-license.org/</licenseUrl>
-        <description>$description$</description>
+        <description>Facebook API Client</description>
         <copyright>Copyright © 2015, Anwar Javed</copyright>
         <tags>IX Facebook</tags>
         <dependencies>

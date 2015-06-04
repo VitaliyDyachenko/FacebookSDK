@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <MSBuildCommunityTasksPath>$(SolutionDir).build</MSBuildCommunityTasksPath>
+        <MSBuildCommunityTasksPath Condition="'$(MSBuildCommunityTasksPath)' == ''">$(MSBuildExtensionsPath)\MSBuildCommunityTasks</MSBuildCommunityTasksPath>
+        <MSBuildCommunityTasksLib>$([MSBUILD]::Unescape($(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.dll))</MSBuildCommunityTasksLib>
     </PropertyGroup>
     <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.Targets" />
     <Target Name="ConfigureVersionNumber">
         <PropertyGroup>
-            <Major>1</Major>
+            <Major>0</Major>
             <Minor>0</Minor>
             <Patch>0</Patch>
             <BuildType>beta</BuildType>
@@ -15,10 +16,10 @@
         <Time>
             <Output TaskParameter="Year" PropertyName="Year" />
         </Time>
-        <Version VersionFile="$(ProjectDir)\AssemblyVersion.txt" BuildType="None" RevisionType="BuildIncrement" Major="0" Minor="0" Build="1">
+        <Version VersionFile="$(ProjectDir)\AssemblyVersion.txt" BuildType="None" RevisionType="BuildIncrement" Major="0" Minor="1">
             <Output TaskParameter="Major" PropertyName="Major" />
 
-            <Output TaskParameter="Build" PropertyName="Minor" />
+            <Output TaskParameter="Minor" PropertyName="Minor" />
             <Output TaskParameter="Revision" PropertyName="Patch" />
         </Version>
 
