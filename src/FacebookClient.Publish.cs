@@ -22,6 +22,34 @@ namespace FacebookSDK
             return await this.GetPublishRequest(post, privacy).ResponseAsync<string>();
         }
 
+        public IHttpResponse<string> PublishToPage(string pageID, Post post)
+        {
+            return this.GetPublishtoPageRequest(pageID, post).Response<string>();
+        }
+
+        public async Task<IHttpResponse<string>> PublishToPageAsync(string pageID, Post post)
+        {
+            return await this.GetPublishtoPageRequest(pageID, post).ResponseAsync<string>();
+        }
+
+        private IHttpRequest GetPublishtoPageRequest(string pageID, Post post)
+        {
+            if (post == null) throw new ArgumentNullException("post");
+
+            var request = this.Post("{0}/feed".FormatString(pageID))
+                .Body("message", post.Message)
+                .Body("link", post.Link)
+                .Body("picture", post.Picture)
+                .Body("name", post.Title)
+                .Body("caption", post.Caption)
+                .Body("description", post.Description);
+
+
+
+
+            return request;
+        }
+
         private IHttpRequest GetPublishRequest(Post post, Privacy privacy = null)
         {
             if (post == null) throw new ArgumentNullException("post");
